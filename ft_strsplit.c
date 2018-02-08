@@ -19,14 +19,14 @@ static int	count_words(char const *s, char c)
 
 	w = 0;
 	cur = (char *)s;
-	while (*s)
+	while (*cur)
 	{
-		if (*s != c)
+		if (*cur != c)
 			++w;
-		while (*s != c && *s != '\0')
-			++s;
-		while (*s == c && *s != '\0')
-			++s;
+		while (*cur != c && *cur != '\0')
+			++cur;
+		while (*cur == c && *cur != '\0')
+			++cur;
 	}
 	return (w);
 }

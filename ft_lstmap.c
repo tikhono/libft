@@ -6,7 +6,7 @@
 /*   By: atikhono <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/16 20:36:21 by atikhono          #+#    #+#             */
-/*   Updated: 2017/11/18 18:21:15 by atikhono         ###   ########.fr       */
+/*   Updated: 2018/02/21 17:36:11 by atikhono         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,6 @@ static void	del(void *content, size_t content_size)
 {
 	free(content);
 	content_size -= content_size;
-	
 }
 
 t_list		*ft_lstmap(t_list *lst, t_list *(*f)(t_list *elem))

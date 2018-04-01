@@ -6,7 +6,7 @@
 /*   By: atikhono <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/15 19:20:12 by atikhono          #+#    #+#             */
-/*   Updated: 2018/03/10 14:23:30 by atikhono         ###   ########.fr       */
+/*   Updated: 2018/04/01 16:09:03 by atikhono         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -94,6 +94,7 @@ void				ft_reverse(char *str);
 int					ft_find_digit(int a, int base);
 long long int		ft_power(long long int a, int n);
 int					ft_sqrt(int a, int n);
+int					ft_count_chars(char *str, char *chr);
 
 int					get_next_line(const int fd, char **line);
 

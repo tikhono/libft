@@ -6,11 +6,13 @@
 #    By: atikhono <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/10/25 20:12:02 by atikhono          #+#    #+#              #
-#    Updated: 2018/04/07 13:10:43 by atikhono         ###   ########.fr        #
+#    Updated: 2018/04/07 20:30:10 by atikhono         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = libft.a
+
+FLAGS = -Wall -Werror -Wextra -Wfatal-errors
 
 SRC =	ft_memset.c\
 		ft_bzero.c\
@@ -91,7 +93,7 @@ fclean: clean
 re: fclean all
 
 %.o: %.c
-		gcc -Wall -Werror -Wextra -c -o $@ $<
+		gcc $(FLAGS) -c -o $@ $<
 
 .PHONY: all clean fclean re
 

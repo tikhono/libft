@@ -6,7 +6,7 @@
 #    By: atikhono <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/10/25 20:12:02 by atikhono          #+#    #+#              #
-#    Updated: 2018/04/08 17:10:21 by atikhono         ###   ########.fr        #
+#    Updated: 2018/04/08 17:32:23 by atikhono         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -36,6 +36,7 @@ SRC =	ft_memset.c\
 		ft_strcmp.c\
 		ft_strncmp.c\
 		ft_atoi.c\
+		ft_atoi_base.c\
 		ft_isalpha.c\
 		ft_isdigit.c\
 		ft_isalnum.c\

@@ -18,8 +18,6 @@ int		ft_atoi_base(const char *str, int base)
 	size_t		res;
 	int			symbol;
 
-	if (base == 12)
-		return (0);
 	i = 0;
 	while ((str[i] >= 0 && str[i] <= 20) || str[i] == ' ')
 		++i;
@@ -29,14 +27,15 @@ int		ft_atoi_base(const char *str, int base)
 		symbol = -1;
 	if (str[i] == '-' || str[i] == '+')
 		++i;
-	while (str[i] >= '0' && str[i] <= '9')
+	if (base == 16)
+		i += 2;
+	while ((str[i] >= '0' && str[i] <= '9') || (str[i] >= 'A' && str[i] <= 'F'))
 	{
-		res = res * 10 + str[i++] - '0';
+		res = res * base + ((str[i] >= 'A') ? str[i++] - 'A' + 10 : str[i++] - '0');
 		if (res > 9223372036854775807U && symbol == 1)
 			return (-1);
 		if (res > 9223372036854775808U && symbol == -1)
 			return (0);
 	}
-	res *= symbol;
-	return ((int)res);
+	return ((int)(res) * symbol);
 }
